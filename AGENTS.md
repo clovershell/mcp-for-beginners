@@ -196,23 +196,26 @@ To automate validation, configure a CI job that:
 Since this is primarily a documentation repository, testing focuses on:
 
 1. **Link Pattern Audit**: List Markdown links for review
-```bash
-# List Markdown links (pattern audit)
-find . -name "*.md" -not -path "*/node_modules/*" -not -path "./translations/*" -not -path "./translated_images/*" -print0 | xargs -0 grep -En "\[.*\]\(.*\)"
-```
+
+   ```bash
+   # List Markdown links (pattern audit)
+   find . -name "*.md" -not -path "*/node_modules/*" -not -path "./translations/*" -not -path "./translated_images/*" -print0 | xargs -0 grep -En "\[.*\]\(.*\)"
+   ```
 
 2. **Code Sample Validation**: Test that code examples compile/run
-```bash
-# Navigate to specific sample and run its tests
-cd 03-GettingStarted/samples/typescript
-npm install && npm test
-```
+
+   ```bash
+   # Navigate to specific sample and run its tests
+   cd 03-GettingStarted/samples/typescript
+   npm install && npm test
+   ```
 
 3. **Markdown Linting**: Check formatting consistency
-```bash
-# Use markdownlint if needed
-npx --yes markdownlint-cli2 "**/*.md" "#node_modules" "#translations" "#translated_images"
-```
+
+   ```bash
+   # Use markdownlint if needed
+   npx --yes markdownlint-cli2 "**/*.md" "#node_modules" "#translations" "#translated_images"
+   ```
 
 ### Sample Project Testing
 
