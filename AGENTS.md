@@ -126,7 +126,7 @@ health before merge.
   `translated_images/`.
 - Execute local shell commands.
 - Optional network access only for package restore (`npm ci`,
-  `pip install`, `mvn` dependency resolution).
+  `python -m pip install`, `mvn` dependency resolution).
 - No permission to push, merge, or modify `translations/` or
   `translated_images/`.
 
